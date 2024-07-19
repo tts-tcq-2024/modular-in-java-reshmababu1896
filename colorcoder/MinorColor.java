@@ -23,7 +23,7 @@ public class MinorColor {
 
     public static final String[] NAMES = {
             "Blue", "Orange", "Green", "Brown", "Slate"
-    };
+    }
 
     public static final int COUNT = NAMES.length;
 }
