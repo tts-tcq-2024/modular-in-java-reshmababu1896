@@ -17,13 +17,15 @@ public class MinorColor {
         int getIndex() {
             return index;
         }
-     public static MinorColor fromIndex(int index) {
-        return ColorUtil.fromIndex(values, index);
-    }
+   
 
     public static final String[] NAMES = {
             "Blue", "Orange", "Green", "Brown", "Slate"
-    }
+    };
 
     public static final int COUNT = NAMES.length;
+
+    public static MinorColor fromIndex(int index) {
+        return ColorUtil.fromIndex(values, index);
+    }   
 }
