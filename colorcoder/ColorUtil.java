@@ -37,19 +37,19 @@ public class ColorUtil {
         return null;
     }
 
-     public static String generateReferenceManual() {
-        StringBuilder manual = new StringBuilder();
-        manual.append("Color Code Reference Manual\n");
-        manual.append("Pair Number | Major Color | Minor Color\n");
-        manual.append("---------------------------------------\n");
+    //  public static String generateReferenceManual() {
+    //     StringBuilder manual = new StringBuilder();
+    //     manual.append("Color Code Reference Manual\n");
+    //     manual.append("Pair Number | Major Color | Minor Color\n");
+    //     manual.append("---------------------------------------\n");
 
-        int pairNumber = 1;
-        for (MajorColor major : MajorColor.values()) {
-            for (MinorColor minor : MinorColor.values()) {
-                manual.append(String.format("%-11d| %-11s| %-11s\n", pairNumber, major, minor));
-                pairNumber++;
-            }
-        }
-        return manual.toString();
-    }
+    //     int pairNumber = 1;
+    //     for (MajorColor major : MajorColor.values()) {
+    //         for (MinorColor minor : MinorColor.values()) {
+    //             manual.append(String.format("%-11d| %-11s| %-11s\n", pairNumber, major, minor));
+    //             pairNumber++;
+    //         }
+    //     }
+    //     return manual.toString();
+    // }
 }
