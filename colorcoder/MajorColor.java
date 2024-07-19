@@ -29,7 +29,7 @@ public class MajorColor {
     // }
 
      public static MajorColor fromIndex(int index) {
-        return Color.fromIndex(values, index);
+        return ColorUtil.fromIndex(values, index);
     }
 
     public static final String[] NAMES = {
