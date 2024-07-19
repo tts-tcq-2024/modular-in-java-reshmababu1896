@@ -14,7 +14,7 @@ public class ColorUtil {
         return major.getIndex() * MinorColor.COUNT + minor.getIndex() + 1;
     }
 
-    protected Color(int index, String name) {
+    protected ColorUtil(int index, String name) {
         this.index = index;
         this.name = name;
     }
