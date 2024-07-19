@@ -18,14 +18,18 @@ public class MajorColor {
             return index;
         }
 
-        public static Color fromIndex(int index) {
-            for (Color color : Color.values()) {
-                if (color.getIndex() == index) {
-                    return color;
-                }
-            }
-            return null;
-        }
+    //     public static Color fromIndex(int index) {
+    //         for (Color color : Color.values()) {
+    //             if (color.getIndex() == index) {
+    //                 return color;
+    //             }
+    //         }
+    //         return null;
+    //     }
+    // }
+
+     public static MajorColor fromIndex(int index) {
+        return Color.fromIndex(values, index);
     }
 
     public static final String[] NAMES = {
