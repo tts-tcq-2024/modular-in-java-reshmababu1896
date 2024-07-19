@@ -23,10 +23,10 @@ public class ColorUtil {
         return index;
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
+    // @Override
+    // public String toString() {
+    //     return name;
+    // }
 
     public static <E extends Color> E fromIndex(E[] values, int index) {
         for (E color : values) {
