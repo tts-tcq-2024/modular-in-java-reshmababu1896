@@ -18,13 +18,15 @@ public class MajorColor {
             return index;
         }
         
-     public static MajorColor fromIndex(int index) {
-        return ColorUtil.fromIndex(values, index);
-    }
+    
 
     public static final String[] NAMES = {
             "White", "Red", "Black", "Yellow", "Violet"
-    }
+    };
 
     public static final int COUNT = NAMES.length;
+
+    public static MajorColor fromIndex(int index) {
+        return ColorUtil.fromIndex(values, index);
+    }     
 }
