@@ -17,16 +17,6 @@ public class MinorColor {
         int getIndex() {
             return index;
         }
-
-    //     public static Color fromIndex(int index) {
-    //         for (Color color : Color.values()) {
-    //             if (color.getIndex() == index) {
-    //                 return color;
-    //             }
-    //         }
-    //         return null;
-    //     }
-    // }
      public static MinorColor fromIndex(int index) {
         return ColorUtil.fromIndex(values, index);
     }
