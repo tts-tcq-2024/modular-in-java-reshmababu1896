@@ -20,5 +20,8 @@ public class PairColorCodeMain {
 
         testPairToNumber(MajorColor.Color.BLACK, MinorColor.Color.ORANGE, 12);
         testPairToNumber(MajorColor.Color.VIOLET, MinorColor.Color.SLATE, 25);
+
+
+        System.out.println(ColorUtil.generateReferenceManual());
     }
 }
