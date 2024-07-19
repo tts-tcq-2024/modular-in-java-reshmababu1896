@@ -27,7 +27,6 @@ public class MinorColor {
     //         return null;
     //     }
     // }
-
      public static MinorColor fromIndex(int index) {
         return ColorUtil.fromIndex(values, index);
     }
