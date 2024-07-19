@@ -24,7 +24,7 @@ public class MajorColor {
 
     public static final String[] NAMES = {
             "White", "Red", "Black", "Yellow", "Violet"
-    };
+    }
 
     public static final int COUNT = NAMES.length;
 }
