@@ -29,7 +29,7 @@ public class MinorColor {
     // }
 
      public static MinorColor fromIndex(int index) {
-        return Color.fromIndex(values, index);
+        return ColorUtil.fromIndex(values, index);
     }
 
     public static final String[] NAMES = {
