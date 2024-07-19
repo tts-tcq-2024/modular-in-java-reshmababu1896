@@ -11,4 +11,5 @@ public class ColorUtil {
     public static int getPairNumberFromColor(MajorColor.Color major, MinorColor.Color minor) {
         return major.getIndex() * MinorColor.COUNT + minor.getIndex() + 1;
     }
+    
 }
