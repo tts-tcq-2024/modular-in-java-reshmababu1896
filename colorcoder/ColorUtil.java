@@ -28,7 +28,7 @@ public class ColorUtil {
     //     return name;
     // }
 
-    public static <E extends Color> E fromIndex(E[] values, int index) {
+    public static <E extends ColorUtil> E fromIndex(E[] values, int index) {
         for (E color : values) {
             if (color.getIndex() == index) {
                 return color;
