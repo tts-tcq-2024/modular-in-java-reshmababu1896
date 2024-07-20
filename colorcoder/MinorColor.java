@@ -1,30 +1,26 @@
 package colorcoder;
 
 public class MinorColor {
-    public enum Color {
+    public enum Color implements ColorUtil.Color {
         BLUE(0),
         ORANGE(1),
         GREEN(2),
         BROWN(3),
         SLATE(4);
 
-        private int index;
+        private final int index;
 
-        private Color(int index) {
+        Color(int index) {
             this.index = index;
         }
 
-        int getIndex() {
+        @Override
+        public int getIndex() {
             return index;
         }
 
         public static Color fromIndex(int index) {
-            for (Color color : Color.values()) {
-                if (color.getIndex() == index) {
-                    return color;
-                }
-            }
-            return null;
+            return (Color) ColorUtil.fromIndex(index, Color.values());
         }
     }
 
