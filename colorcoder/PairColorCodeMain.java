@@ -13,8 +13,16 @@ public class PairColorCodeMain {
         System.out.println("Got pair number " + pairNumber);
         assert(pairNumber == expectedPairNumber);
     }
+    public void renerateColorCodeManual(){
+        MajorColor.Color[] majorColors = MajorColor.Color.values();
+        MinorColor.Color[] minorColors = MinorColor.Color.values();
+
+        String referenceManual = ColorUtil.generateReferenceManual(majorColors, minorColors);
+        System.out.println(referenceManual);
+    }
 
     public static void main(String[] args) {
+        renerateColorCodeManual();
         testNumberToPair(4, MajorColor.Color.WHITE, MinorColor.Color.BROWN);
         testNumberToPair(5, MajorColor.Color.WHITE, MinorColor.Color.SLATE);
 
