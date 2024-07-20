@@ -13,7 +13,7 @@ public class PairColorCodeMain {
         System.out.println("Got pair number " + pairNumber);
         assert(pairNumber == expectedPairNumber);
     }
-    public void renerateColorCodeManual(){
+    public static void generateColorCodeManual(){
         MajorColor.Color[] majorColors = MajorColor.Color.values();
         MinorColor.Color[] minorColors = MinorColor.Color.values();
 
@@ -22,7 +22,7 @@ public class PairColorCodeMain {
     }
 
     public static void main(String[] args) {
-        renerateColorCodeManual();
+        generateColorCodeManual();
         testNumberToPair(4, MajorColor.Color.WHITE, MinorColor.Color.BROWN);
         testNumberToPair(5, MajorColor.Color.WHITE, MinorColor.Color.SLATE);
 
