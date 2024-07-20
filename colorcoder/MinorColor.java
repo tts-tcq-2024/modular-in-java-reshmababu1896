@@ -1,22 +1,29 @@
 package colorcoder;
 
-public class MinorColor {
+public class MajorColor {
     public enum Color implements ColorUtil.Color {
-        BLUE(0),
-        ORANGE(1),
-        GREEN(2),
-        BROWN(3),
-        SLATE(4);
+        WHITE(0, "White"),
+        RED(1, "Red"),
+        BLACK(2, "Black"),
+        YELLOW(3, "Yellow"),
+        VIOLET(4, "Violet");
 
         private final int index;
+        private final String name;
 
-        Color(int index) {
+        Color(int index, String name) {
             this.index = index;
+            this.name = name;
         }
 
         @Override
         public int getIndex() {
             return index;
+        }
+
+        @Override
+        public String getName() {
+            return name;
         }
 
         public static Color fromIndex(int index) {
@@ -25,7 +32,7 @@ public class MinorColor {
     }
 
     public static final String[] NAMES = {
-            "Blue", "Orange", "Green", "Brown", "Slate"
+            "White", "Red", "Black", "Yellow", "Violet"
     };
 
     public static final int COUNT = NAMES.length;
