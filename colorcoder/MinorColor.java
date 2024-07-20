@@ -1,12 +1,12 @@
 package colorcoder;
 
-public class MinorColor {
+public class MajorColor {
     public enum Color {
-        BLUE(0),
-        ORANGE(1),
-        GREEN(2),
-        BROWN(3),
-        SLATE(4);
+        WHITE(0),
+        RED(1),
+        BLACK(2),
+        YELLOW(3),
+        VIOLET(4);
 
         private int index;
 
@@ -17,15 +17,20 @@ public class MinorColor {
         int getIndex() {
             return index;
         }
-   
+
+        public static Color fromIndex(int index) {
+            for (Color color : Color.values()) {
+                if (color.getIndex() == index) {
+                    return color;
+                }
+            }
+            return null;
+        }
+    }
 
     public static final String[] NAMES = {
-            "Blue", "Orange", "Green", "Brown", "Slate"
+            "White", "Red", "Black", "Yellow", "Violet"
     };
 
     public static final int COUNT = NAMES.length;
-
-    public static MinorColor fromIndex(int index) {
-        return ColorUtil.fromIndex(values, index);
-    }   
 }
