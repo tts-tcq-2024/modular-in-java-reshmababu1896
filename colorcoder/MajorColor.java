@@ -1,30 +1,26 @@
 package colorcoder;
 
 public class MajorColor {
-    public enum Color {
+    public enum Color implements ColorUtil.Color {
         WHITE(0),
         RED(1),
         BLACK(2),
         YELLOW(3),
         VIOLET(4);
 
-        private int index;
+        private final int index;
 
-        private Color(int index) {
+        Color(int index) {
             this.index = index;
         }
 
-        int getIndex() {
+        @Override
+        public int getIndex() {
             return index;
         }
 
         public static Color fromIndex(int index) {
-            for (Color color : Color.values()) {
-                if (color.getIndex() == index) {
-                    return color;
-                }
-            }
-            return null;
+            return (Color) ColorUtil.fromIndex(index, Color.values());
         }
     }
 
