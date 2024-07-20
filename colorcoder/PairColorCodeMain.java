@@ -10,7 +10,7 @@ public class PairColorCodeMain {
 
     public static void testPairToNumber(MajorColor.Color major, MinorColor.Color minor, int expectedPairNumber) {
         int pairNumber = ColorUtil.getPairNumberFromColor(major, minor);
-        printMessage("Got pair number " + pairNumber.toString());
+        printMessage("Got pair number " + String.valueOf(pairNumber));
         assert(pairNumber == expectedPairNumber);
     }
     public static void generateColorCodeManual(){
