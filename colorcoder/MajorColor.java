@@ -2,21 +2,28 @@ package colorcoder;
 
 public class MajorColor {
     public enum Color implements ColorUtil.Color {
-        WHITE(0),
-        RED(1),
-        BLACK(2),
-        YELLOW(3),
-        VIOLET(4);
+        WHITE(0, "White"),
+        RED(1, "Red"),
+        BLACK(2, "Black"),
+        YELLOW(3, "Yellow"),
+        VIOLET(4, "Violet");
 
         private final int index;
+        private final String name;
 
-        Color(int index) {
+        Color(int index, String name) {
             this.index = index;
+            this.name = name;
         }
 
         @Override
         public int getIndex() {
             return index;
+        }
+
+        @Override
+        public String getName() {
+            return name;
         }
 
         public static Color fromIndex(int index) {
