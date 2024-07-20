@@ -1,12 +1,12 @@
 package colorcoder;
 
-public class MajorColor {
+public class MinorColor {
     public enum Color implements ColorUtil.Color {
-        WHITE(0, "White"),
-        RED(1, "Red"),
-        BLACK(2, "Black"),
-        YELLOW(3, "Yellow"),
-        VIOLET(4, "Violet");
+        BLUE(0, "Blue"),
+        ORANGE(1, "Orange"),
+        GREEN(2, "Green"),
+        BROWN(3, "Brown"),
+        SLATE(4, "Slate");
 
         private final int index;
         private final String name;
@@ -32,7 +32,7 @@ public class MajorColor {
     }
 
     public static final String[] NAMES = {
-            "White", "Red", "Black", "Yellow", "Violet"
+            "Blue", "Orange", "Green", "Brown", "Slate"
     };
 
     public static final int COUNT = NAMES.length;
