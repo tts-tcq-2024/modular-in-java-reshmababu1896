@@ -3,15 +3,13 @@ package colorcoder;
 public class PairColorCodeMain {
     public static void testNumberToPair(int pairNumber, MajorColor.Color expectedMajor, MinorColor.Color expectedMinor) {
         ColorPair colorPair = ColorUtil.getColorFromPairNumber(pairNumber);
-        // System.out.println("Got pair " + colorPair);
-        printMessage("Got pair " + colorPair.toStirng());
+        printMessage("Got pair " +  String.valueOf(colorPair);
         assert(colorPair.getMajor() == expectedMajor);
         assert(colorPair.getMinor() == expectedMinor);
     }
 
     public static void testPairToNumber(MajorColor.Color major, MinorColor.Color minor, int expectedPairNumber) {
         int pairNumber = ColorUtil.getPairNumberFromColor(major, minor);
-        // System.out.println("Got pair number " + pairNumber);
         printMessage("Got pair number " + pairNumber.toString());
         assert(pairNumber == expectedPairNumber);
     }
