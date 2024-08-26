@@ -1,7 +1,7 @@
 package colorcoder;
 
 public class PairColorCodeMain {
-    public static colorPair numberToPair(int pairNumber, MajorColor.Color expectedMajor, MinorColor.Color expectedMinor) {
+    public static ColorPair numberToPair(int pairNumber, MajorColor.Color expectedMajor, MinorColor.Color expectedMinor) {
         ColorPair colorPair = ColorUtil.getColorFromPairNumber(pairNumber);
        return colorpair;
         // assert(colorPair.getMajor() == expectedMajor);
