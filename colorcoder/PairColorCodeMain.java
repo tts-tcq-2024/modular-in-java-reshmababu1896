@@ -3,14 +3,14 @@ package colorcoder;
 public class PairColorCodeMain {
     public static void testNumberToPair(int pairNumber, MajorColor.Color expectedMajor, MinorColor.Color expectedMinor) {
         ColorPair colorPair = ColorUtil.getColorFromPairNumber(pairNumber);
-        printMessage("Got pair " +  String.valueOf(colorPair));
+       
         assert(colorPair.getMajor() == expectedMajor);
         assert(colorPair.getMinor() == expectedMinor);
     }
 
     public static void testPairToNumber(MajorColor.Color major, MinorColor.Color minor, int expectedPairNumber) {
         int pairNumber = ColorUtil.getPairNumberFromColor(major, minor);
-        printMessage("Got pair number " + String.valueOf(pairNumber));
+     
         assert(pairNumber == expectedPairNumber);
     }
     public static void generateColorCodeManual(){
@@ -18,8 +18,12 @@ public class PairColorCodeMain {
         MinorColor.Color[] minorColors = MinorColor.Color.values();
 
         String referenceManual = ColorUtil.generateReferenceManual(majorColors, minorColors);
-        System.out.println(referenceManual);
+        printManual(referenceManual);
     }
+    private static void printManual(String referenceManual){
+       System.out.println(referenceManual);  
+    }
+    
     public static void printMessage(String message){
         System.out.println(message);
     }
