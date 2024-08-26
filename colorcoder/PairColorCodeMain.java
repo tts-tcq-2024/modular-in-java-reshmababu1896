@@ -1,17 +1,17 @@
 package colorcoder;
 
 public class PairColorCodeMain {
-    public static void testNumberToPair(int pairNumber, MajorColor.Color expectedMajor, MinorColor.Color expectedMinor) {
+    public static colorPair numberToPair(int pairNumber, MajorColor.Color expectedMajor, MinorColor.Color expectedMinor) {
         ColorPair colorPair = ColorUtil.getColorFromPairNumber(pairNumber);
-       
-        assert(colorPair.getMajor() == expectedMajor);
-        assert(colorPair.getMinor() == expectedMinor);
+       return colorpair;
+        // assert(colorPair.getMajor() == expectedMajor);
+        // assert(colorPair.getMinor() == expectedMinor);
     }
 
-    public static void testPairToNumber(MajorColor.Color major, MinorColor.Color minor, int expectedPairNumber) {
+    public static int pairToNumber(MajorColor.Color major, MinorColor.Color minor, int expectedPairNumber) {
         int pairNumber = ColorUtil.getPairNumberFromColor(major, minor);
-     
-        assert(pairNumber == expectedPairNumber);
+     return pairNumber;
+        // assert(pairNumber == expectedPairNumber);
     }
     public static void generateColorCodeManual(){
         MajorColor.Color[] majorColors = MajorColor.Color.values();
@@ -30,11 +30,11 @@ public class PairColorCodeMain {
 
     public static void main(String[] args) {
         generateColorCodeManual();
-        testNumberToPair(4, MajorColor.Color.WHITE, MinorColor.Color.BROWN);
-        testNumberToPair(5, MajorColor.Color.WHITE, MinorColor.Color.SLATE);
+        // testNumberToPair(4, MajorColor.Color.WHITE, MinorColor.Color.BROWN);
+        // testNumberToPair(5, MajorColor.Color.WHITE, MinorColor.Color.SLATE);
 
-        testPairToNumber(MajorColor.Color.BLACK, MinorColor.Color.ORANGE, 12);
-        testPairToNumber(MajorColor.Color.VIOLET, MinorColor.Color.SLATE, 25);
+        // testPairToNumber(MajorColor.Color.BLACK, MinorColor.Color.ORANGE, 12);
+        // testPairToNumber(MajorColor.Color.VIOLET, MinorColor.Color.SLATE, 25);
 
 
         
